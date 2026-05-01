@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1,h2 {
+             display:inline-block;
+
+       } 
+	h2 {
+          color: grey
+             }
+        .search-container {
+            text-align: center;
+        }
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+    <img alt="Gran" height="125" src="/images/Logo.png" style="padding:28px 0 14px" width="272" id="hplogo">
+<br>
+51 search queries give results.
+     <br>
+        <input type="text" class="search-bar" id="searchBar" placeholder="Enter your search query...">
+        <button class="search-button" onclick="performSearch()">Search</button>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+  <button>I'm Feeling Lucky</button>
+</a>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+
+        const index = {
+            "google": "https://www.google.com",
+            "bing": "https://www.bing.com",
+            "yahoo": "https://www.yahoo.com",
+            "youtube": "https://www.youtube.com",
+            "wikipedia": "https://www.wikipedia.org",
+             "roblox": "https://www.roblox.com",
+             "scratch": "https://scratch.mit.edu",
+              "msn": "https://www.msn.com",
+               "elgoog": "https://elgoog.im",
+               "tiktok": "https://www.tiktok.com",
+               "reddit": "https://www.reddit.com",
+               "slack": "https://slack.com",
+               "discord": "https://discord.com",
+              "linkedin": "https://www.linkedin.com",
+              "facebook": "https://www.facebook.com",
+              "github": "https://github.com",
+               "twitter": "https://x.com",
+               "x": "https://x.com",
+                "instagram": "https://www.instagram.com",
+                "ixl": "https://www.ixl.com",
+                "ttrs": "https://us.ttrsonline.com",
+                 "ebay": "https://www.ebay.com",
+                 "amazon": "https://www.amazon.com",
+                 "netflix": "https://www.netflix.com",
+                 "fandom": "https://www.fandom.com",
+                 "quora": "https://www.quora.com",
+                 "spotify": "https://open.spotify.com",
+                  "imdb": "https://www.imdb.com",
+                  "bluesky": "https://bsky.app",
+                  "lego": "https://www.lego.com",
+                  "minecraft": "https://www.minecraft.net",
+                  "apple": "https://www.apple.com",
+                  "booking": "https://www.booking.com",
+                   "dailymotion": "https://www.dailymotion.com",
+                   "cnn": "https://www.cnn.com",
+                    "microsoft": "https://www.microsoft.com",
+                    "duckduckgo": "https://duckduckgo.com",
+                    "ecosia": "https://www.ecosia.org",
+                     "walmart": "https://www.walmart.com",
+                     "chatgpt": "https://chatgpt.com",
+                      "vimeo": "https://vimeo.com",
+                      "telegram": "https://telegram.org",
+                      "the weather channel": "https://weather.com",
+                      "the new york times": "https://www.nytimes.com",
+                      "mozilla": "https://www.mozilla.org",
+                     "whatsapp": "https://www.whatsapp.com",
+                     "ikea": "https://www.ikea.com",
+                     "the washington post": "https://www.washingtonpost.com",
+                     "downdetecter": "https://downdetector.com",
+                      "disney+": "https://www.disneyplus.com",
+                       "hulu": "https://www.hulu.com",
+        };
+
+        function performSearch() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "";
+
+            if (index[query]) {
+             
+                resultsDiv.innerHTML = `<p>Result: <a href="${index[query]}" target="_blank">${index[query]}</a></p>`;
+            } else {
+  
+                resultsDiv.innerHTML = "<p>No results found.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
